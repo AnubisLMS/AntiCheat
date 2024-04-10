@@ -43,7 +43,7 @@ def code_to_highlighted_html(code, ranges):
                     html += "<span style='background-color: red; color: white'>"
                     in_range = True
                     # print((ln, col), range_i, in_range)
-        
+
         html += c
         if c == '\n':
             ln += 1

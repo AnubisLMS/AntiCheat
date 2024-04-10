@@ -17,12 +17,12 @@ class TestMayat(unittest.TestCase):
         c_files = [os.path.join(C_SAMPLE_DIR, f) for f in os.listdir(C_SAMPLE_DIR)]
         result = TS_C.main(c_files, "*", 5)
         check_similarity(result)
-    
+
     def test_TS_Java_frontend(self):
         java_files = [os.path.join(JAVA_SAMPLE_DIR, f) for f in os.listdir(JAVA_SAMPLE_DIR)]
         result = TS_Java.main(java_files, "*", 20)
         check_similarity(result)
-    
+
     def test_TS_Python_frontend(self):
         python_files = [os.path.join(PYTHON_SAMPLE_DIR, f) for f in os.listdir(PYTHON_SAMPLE_DIR)]
         result = TS_Java.main(python_files, "*", 5)

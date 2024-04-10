@@ -33,7 +33,7 @@ class AST:
         ).hexdigest()
 
         return self.fingerprint
-    
+
     def hash_non_recursive(self):
         """
         Equivalent to hash() but non-recursive
