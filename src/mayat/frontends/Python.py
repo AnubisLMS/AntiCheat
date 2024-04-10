@@ -13,7 +13,7 @@ PYTHON3_FUNCTION_KIND = "FunctionDef"
 class Python_AST(AST):
     def __init__(self, parent=None, name=None, text=None, start_pos=None, end_pos=None, kind=None):
         AST.__init__(self, parent, name, text, start_pos, end_pos, kind)
-    
+
     @classmethod
     def create(cls, path):
         def helper(node, parent=None):
@@ -22,7 +22,7 @@ class Python_AST(AST):
                 name = node.name.encode()
             elif isinstance(node, ast.Name):
                 name = node.id.encode()
-            
+
             pos = None
             if hasattr(node, 'lineno') and hasattr(node, 'col_offset'):
                 pos = (node.lineno, node.col_offset)
@@ -42,7 +42,7 @@ class Python_AST(AST):
                 child_node = helper(child, python_ast_node)
                 python_ast_node.children.append(child_node)
                 python_ast_node.weight += child_node.weight
-            
+
             return python_ast_node
 
         with open(path, 'r') as f:

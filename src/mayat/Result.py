@@ -5,11 +5,11 @@ def to_json(result_dict: dict) -> str:
 
 def to_text(result_dict: dict) -> str:
     result = ""
-    
+
     result += str(result_dict["current_datetime"]) + "\n\n"
-    
+
     result += f"Checking function: {result_dict['function']}" + "\n\n"
-    
+
     result += "Warnings:" + "\n"
     for warning in result_dict["warnings"]:
         result += warning + "\n"
@@ -35,12 +35,12 @@ def to_text(result_dict: dict) -> str:
 #     for warning in result_dict["warnings"]:
 #         print(warning)
 #     print()
-        
+
 #     print(f"Checker result:")
 #     for entry in sorted(result_dict["result"], key=lambda x: x["similarity"], reverse=True):
 #         print(f"{entry['submission_A']} - {entry['submission_B']}:\t{entry['similarity']:%}")
 #     print()
-    
+
 #     print(f"{result_dict['execution_time']}s")
 
 def serialize_result(result_dict: dict, format: str, list_all: bool) -> str:

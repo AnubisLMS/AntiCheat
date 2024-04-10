@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Mayat"
-version = "1.1.0"
+name = "mayat"
+version = "1.1.1"
 authors = [
     { name="Tian(Maxwell) Yang", email="ty1146@nyu.edu" },
 ]
@@ -22,7 +22,8 @@ dependencies = [
     "clang",
     "tree-sitter",
     "tqdm",
-    "GitPython"
+    "GitPython",
+		"flask",
 ]
 
 [project.urls]

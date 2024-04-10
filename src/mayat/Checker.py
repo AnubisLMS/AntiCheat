@@ -6,7 +6,7 @@ class FlattenedTree:
         self.flattened = ast.preorder()
         self.flattened.sort(key=lambda node: node.weight, reverse=True)
         self.removed = set()
-    
+
     def nodes(self):
         self.removed = set()
 
@@ -14,10 +14,10 @@ class FlattenedTree:
             if node in self.removed:
                 continue
             yield node
-    
+
     def remove(self, node):
         self.removed.update(node.preorder())
-    
+
     def __len__(self):
         return len(self.flattened)
 
@@ -28,7 +28,7 @@ class Checker:
         self.path2 = path2
         self.flattened1 = FlattenedTree(ast1)
         self.flattened2 = FlattenedTree(ast2)
-            
+
         self.threshold = threshold
         self.similarity = 0
         self.overlapping_ranges = []
@@ -90,7 +90,7 @@ class Checker:
                 else:
                     overlaps_in_arrLL2[key][0].append(node)
                     overlaps_in_arrLL2[key][1] += 1
-        
+
         for key in overlaps_in_arrLL2:
             overlaps_in_arrLL2[key][0] = iter(overlaps_in_arrLL2[key][0])
 
