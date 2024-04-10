@@ -2,22 +2,10 @@
 
 **Mayat** is a code similarity detection tool developed by [Tian(Maxwell) Yang](https://github.com/AlpacaMax). It works by comparing the Abstract Syntax Trees of students' code solutions and generate a similarity score for each pair of students' code.
 
-## Build & Install
+## Install
 
-1. Clone the repo
 ```
-git clone git@github.com:AnubisLMS/Mayat.git
-```
-
-2. Install dependencies and install Mayat
-```
-cd Mayat
-pip install -r requirements_dev.txt
-python setup.py install
-```
-
-3. Install `tree-sitter` parsers
-```
+pip install mayat
 python -m mayat.install_langs
 ```
 
